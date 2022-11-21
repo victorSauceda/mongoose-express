@@ -23,8 +23,8 @@ router.delete('/:id', (req, resp) => {
     resp.send(`Book ${req.params.id} has been successfully deleted!`);
 })
 
-router.put('/:id', (req, resp) => {
-    const updatedBook = bookData.books.filter((book)=> book.isbn === req.params.id)
+router.put('/:id', async (req, resp) => {
+    const updatedBook = await bookData.books.filter((book)=> book.isbn === req.params.id)
     resp.send(`${updatedBook[0].title} has been updated successfully.`);
   })
 module.exports = router
