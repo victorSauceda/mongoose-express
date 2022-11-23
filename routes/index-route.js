@@ -19,7 +19,8 @@ router.get('/about', (req, resp) => {
     resp.send(bookData.books)
 })
 router.get('/update/:id', (req, resp) => {
-    resp.render('index')
+    const book = bookData.books.filter((book) => book.isbn === req.params.id);
+    resp.render('index', {isbn: book[0].isbn, title: book[0].title, subtitle: book[0].subtitle, author: book[0].author, published: book[0].published, publisher: book[0].publisher, pages: book[0].pages, description: book[0].description, website: book[0].website})
 })
 router.delete('/:id', (req, resp) => {
     resp.send(`Book ${req.params.id} has been successfully deleted!`);
@@ -29,8 +30,6 @@ router.get('/:id', (req, resp) => {
 })
 router.post('/update/:id', async (req, resp) => {
     const updatedBook = await bookData.books.filter((book)=> book.isbn === req.params.id)
-    resp.send(`${updatedBook[0].title} has been updated successfully.`);
-    
     updatedBook[0].isbn = req.body.isbn,
     updatedBook[0].title = req.body.title,
     updatedBook[0].subtitle = req.body.subtitle,
@@ -41,6 +40,6 @@ router.post('/update/:id', async (req, resp) => {
     updatedBook[0].description = req.body.description,
     updatedBook[0].website = req.body.website
     
-    resp.redirect('/:id')
+    resp.redirect(`/${updatedBook[0].isbn}`)
 })
 module.exports = router
