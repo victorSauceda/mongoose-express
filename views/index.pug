@@ -1,9 +1,32 @@
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        
-        title= 'Day 8 Homework' 
-    body 
-    p The title of this book is #{title} and the author is #{author}.
+head
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+  title= 'Day 8 Homework' 
+body 
+block content
+  p Enter Information To Be Updated
+  form(action= '' method = 'post')
+    p ISBN
+    input(type = 'text', name = 'isbn', value =isbn)
+    p Title
+    input(type = 'text', name = 'title', value =title)
+    p Subtitle
+    input(type = 'text', name = 'subtitle', value =subtitle)
+    p Author
+    input(type = 'text', name = 'author', value =author)
+    p Published
+    input(type = 'text', name = 'published', value =published)
+    p Publisher
+    input(type = 'text', name = 'publisher', value =publisher)
+    p Pages
+    input(type = 'text', name = 'pages', value =pages)
+    p Description
+    input(type = 'text', name = 'description', value =description)
+    p Website
+    input(type = 'text', name = 'website', value =website)
+    br
+    br
+    button(type = 'submit') Submit
