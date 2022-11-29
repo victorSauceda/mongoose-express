@@ -1,32 +1,30 @@
 html(lang="en")
 head
   meta(charset="UTF-8")
-  meta(http-equiv="X-UA-Compatible", content="IE=edge")
-  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X~-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-  title= 'Day 8 Homework' 
+  title= 'View Book' 
 body 
-block content
-  p Enter Information To Be Updated
   form(action= '' method = 'post')
     p ISBN
-    input(type = 'text', name = 'isbn', value =isbn)
+    input(type = 'text', name = 'isbn', value =isbn, disabled)
     p Title
-    input(type = 'text', name = 'title', value =title)
+    input(type = 'text', name = 'title', value =title, disabled)
     p Subtitle
-    input(type = 'text', name = 'subtitle', value =subtitle)
+    input(type = 'text', name = 'subtitle', value =subtitle, disabled)
     p Author
-    input(type = 'text', name = 'author', value =author)
+    input(type = 'text', name = 'author', value =author, disabled)
     p Published
-    input(type = 'text', name = 'published', value =published)
+    input(type = 'text', name = 'published', value =published, disabled)
     p Publisher
-    input(type = 'text', name = 'publisher', value =publisher)
+    input(type = 'text', name = 'publisher', value =publisher, disabled)
     p Pages
-    input(type = 'text', name = 'pages', value =pages)
+    input(type = 'text', name = 'pages', value =pages, disabled)
     p Description
-    input(type = 'text', name = 'description', value =description)
+    input(type = 'text', name = 'description', value =description, disabled)
     p Website
-    input(type = 'text', name = 'website', value =website)
+    input(type = 'text', name = 'website', value =website, disabled)
     br
     br
-    button(type = 'submit') Submit
+    button(type = 'submit' disabled) Submit
