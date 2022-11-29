@@ -1,0 +1,32 @@
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    title= 'Add a book' 
+body 
+block content
+    p Enter Information To Be Updated
+    form(action= '' method = 'post')
+        p ISBN
+        input(type = 'text', name = 'isbn',)
+        p Title
+        input(type = 'text', name = 'title')
+        p Subtitle
+        input(type = 'text', name = 'subtitle')
+        p Author
+        input(type = 'text', name = 'author')
+        p Published
+        input(type = 'text', name = 'published')
+        p Publisher
+        input(type = 'text', name = 'publisher')
+        p Pages
+        input(type = 'text', name = 'pages')
+        p Description
+        input(type = 'text', name = 'description')
+        p Website
+        input(type = 'text', name = 'website')
+        br
+        br
+        button(type = 'submit') Submit
