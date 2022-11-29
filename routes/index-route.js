@@ -3,7 +3,7 @@ const express = require("express");
 
 const Book = require("../models/Book");
 mongoose.connect(
-  "mongodb+srv://victory-code:Mafiamoves1@cluster0.f9uqq.mongodb.net/?retryWrites=true&w=majority"
+  `mongodb+srv://${process.env.MONGODB}@cluster0.f9uqq.mongodb.net/?retryWrites=true&w=majority`
 );
 const router = express.Router();
 const bookData = require("../book-data");
